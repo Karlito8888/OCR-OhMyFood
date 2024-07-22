@@ -1,0 +1,51 @@
+// variables
+$color1: #9356DC;
+$color2: #FF79DA;
+$color3: #99E2D0;
+
+// mixins
+@mixin centerChild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// fonts
+
+@font-face {
+    font-family: "roboto";
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: "shrikhand";
+    src: url(../assets/fonts/Shrikhand-Regular.ttf);
+}
+
+$font1: roboto, sans-serif;
+$font2: shrikhand, serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font1;
+    font-size: 16px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+a, a:visited {
+    color: black;
+}
