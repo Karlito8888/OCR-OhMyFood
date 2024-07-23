@@ -1,6 +1,7 @@
 @import "./settings";
-@import "./pages/home";
-@import "./pages/restos";
-@import "./layouts/header";
+@import "./pages/home/home-header";
+@import "./pages/home/home-hero";
+@import "./pages/home/home-hiw";
+@import "./pages/restos/restos-header";
 @import "./layouts/footer";
 @import "./components/buttons";
