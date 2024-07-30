@@ -1,7 +1,4 @@
 .home-main-container {
-  width: 100%;
-  height: auto;
-  font-family: $font1;
 
   .header-container {
     width: 100%;
@@ -19,7 +16,7 @@
         height: 36px;
 
         h1 {
-          font-family: $font2;
+          font-family: $font3;
           color: $black1;
           font-size: clamp(1.875rem, 0.5625rem + 2.7344vw, 2.3125rem);
           font-weight: 400;

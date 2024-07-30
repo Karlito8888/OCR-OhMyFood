@@ -2,6 +2,7 @@
 $color1: #9356dc;
 $color2: #ff79da;
 $color3: #99e2d0;
+$color4: #008766;
 $black1: #101010;
 $black2: #353535;
 $grey1: #eaeaea;
@@ -18,8 +19,13 @@ $grey3: #7e7e7e;
 // fonts
 
 @font-face {
-  font-family: "roboto";
+  font-family: "roboto-regular";
   src: url(../assets/fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: "roboto-thin";
+  src: url(../assets/fonts/Roboto-Thin.ttf);
 }
 
 @font-face {
@@ -27,8 +33,9 @@ $grey3: #7e7e7e;
   src: url(../assets/fonts/Shrikhand-Regular.ttf);
 }
 
-$font1: roboto, sans-serif;
-$font2: shrikhand, serif;
+$font1: roboto-regular, sans-serif;
+$font2: roboto-thin, sans-serif;
+$font3: shrikhand, serif;
 
 * {
   margin: 0;
@@ -42,19 +49,26 @@ html {
 
 body {
   height: 100dvh;
+  width: 100%;
+  width: 100vw;
+  min-width: 320px;
+  max-width: 1440px;
+  margin-inline: auto;
   font-family: $font1;
   font-size: 16px;
   background-color: white;
   overflow-x: hidden;
-  display: flex;
-  justify-content: center;
+  overflow-x: clip;
 }
 
-.home-main-container,
-.restos-main-container {
+.home-main-container {
   width: 100%;
-  min-width: 320px;
-  max-width: 1440px;
+  height: auto;
+  font-family: $font1;
+}
+
+main {
+    width: 100%;
 }
 
 h2,
@@ -64,6 +78,10 @@ h3 {
 
 h2 {
   font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
 }
 
 li {
@@ -80,4 +98,11 @@ a:visited {
 path {
   width: 100%;
   height: 100%;
+}
+
+.favorite-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
 }
