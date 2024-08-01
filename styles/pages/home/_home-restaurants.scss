@@ -2,28 +2,28 @@
   main {
     .restaurants-container {
       width: 100%;
-      padding: 54px 17px 66px;
+      padding-top: 54px;
+      padding-bottom: 66px;
+      padding-inline: clamp(17px, -3.8rem + 19.4vw, 180px);
       background-color: $grey2;
       display: grid;
       grid-template-rows: 31px 1fr;
       gap: 25px;
 
       h2 {
-        margin-inline-start: 3px;
+        margin-left: 3px;
       }
 
       .restaurants-list {
-        // width: calc(100vw - 34px);
-        display: block;
-        width: 100%;
-        margin-inline: auto;
         display: grid;
+        justify-items: center;
         grid-template-columns: 1fr;
         gap: 18px;
 
         .restaurant-card {
-          width: calc(100vw - 34px);
           height: 251px;
+          width: 100%;
+          max-width: 490px;
           border-radius: 15px;
           box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
           display: grid;
@@ -154,4 +154,19 @@
 // ------------------------------------------------------------------
 //          Large devices
 
-// @media only screen and (min-width: 1025px) {}
+@media only screen and (min-width: 1240px) {
+  .home-main-container {
+    main {
+      .restaurants-container {
+        height: auto;
+        padding: 30px 180px;
+
+        .restaurants-list {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 50px 100px;
+        }
+      }
+    }
+  }
+}
+ 

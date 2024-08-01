@@ -1,0 +1,21 @@
+footer {
+  width: 100%;
+  height: auto;
+  background-color: $black2;
+  display: grid;
+  gap: 16px;
+  color: white;
+  .footer-content {
+    width: 100%;
+    padding: 22px 25px;
+    .footer-logo {
+      font-size: 18px;
+    }
+    a {
+      svg {
+        height: 13px;
+        fill: white;
+      }
+    }
+  }
+}
