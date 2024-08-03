@@ -1,0 +1,210 @@
+.restaurants-main-container {
+  .menu {
+    width: clamp(23.4375rem, 7.0913rem + 65.3846vw, 65.9375rem);
+    max-width: 1055px;
+    height: auto;
+    margin-inline: auto;
+    background-color: $grey2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .container {
+      //   width: clamp(21.8125rem, 14.9615rem + 27.4038vw, 39.625rem);
+      display: grid;
+      gap: 40px;
+      margin-top: clamp(0rem, -0.4407rem + 1.7628vw, 0.6875rem);
+
+      .menu-title {
+        width: 100%;
+        height: 29px;
+        display: flex;
+        justify-content: space-between;
+
+        h1 {
+          font-family: $font3;
+          font-size: 28px;
+          font-weight: 400;
+        }
+        .heart-switch {
+          position: relative;
+          width: 22px;
+          height: 22px;
+          margin-right: 28px;
+          align-self: flex-end;
+        }
+
+        input {
+          display: none;
+        }
+
+        .heart {
+          width: 22px;
+          height: 22px;
+          position: relative;
+          cursor: pointer;
+          transition: color 0.3s ease;
+
+          &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            @include centerChild;
+            width: 100%;
+            height: 100%;
+            background-image: url("../assets/images/icons/heart-regular.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+              193.33deg,
+              #9356dc -11.44%,
+              #ff79da 123.93%
+            );
+            mask-image: url("../assets/images/icons/heart-solid.svg");
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+        }
+
+        .heart-switch input:checked + .heart::after {
+          opacity: 1;
+        }
+      }
+      .order-button {
+        margin-bottom: 40px;
+      }
+
+      .menu-section {
+        display: grid;
+        gap: 12px;
+        width: clamp(349px, 10.4125rem + 45.6vw, 634px);
+
+        h2 {
+          font-size: 16px;
+          font-family: $font2;
+          height: 27px;
+          text-transform: uppercase;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            width: 40px;
+            background-color: $color3;
+          }
+        }
+
+        .menu-item {
+          border-radius: 15px;
+          background-color: white;
+          padding: 15px 13.5px 13.5px;
+          display: grid;
+          grid-template-columns: 1fr 27px;
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-areas:
+            "nam pri"
+            "des pri";
+          gap: 5px;
+          box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          position: relative;
+
+          .item-name {
+            grid-area: nam;
+            font-size: 18px;
+            font-weight: 600;
+            align-self: center;
+          }
+
+          .item-description {
+            grid-area: des;
+            font-size: 15px;
+            font-family: $font2;
+            align-self: center;
+          }
+
+          .item-price {
+            grid-area: pri;
+            font-size: 15px;
+            font-weight: 700;
+            align-self: end;
+            justify-self: end;
+          }
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 70px;
+            background-color: $color3;
+          }
+        }
+      }
+
+      .order-button {
+        margin-inline: auto;
+
+        button {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -2rem;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 2rem;
+      background-color: $grey2;
+      border-radius: 40px 40px 0 0;
+    }
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .restaurants-main-container {
+    .menu-title {
+      display: flex;
+      height: 41px !important;
+      gap: 24px;
+      justify-content: center !important;
+
+      .heart-switch {
+        margin-right: 0 !important;
+        align-self: center !important;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .restaurants-main-container {
+    .menu {
+      &::before {
+        top: -2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+}

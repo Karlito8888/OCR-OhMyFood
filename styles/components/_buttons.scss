@@ -3,6 +3,7 @@
   width: 218px;
   border-radius: 50px;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  color: white;
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   @include centerChild;
   font-weight: 600;
@@ -10,7 +11,6 @@
   transition: background 0.3s, box-shadow 0.3s;
 
   &:hover {
-    // background: linear-gradient(193.33deg, #a56de0 -11.44%, #ff8edb 123.93%);
     background: linear-gradient(193.33deg, lighten(#9356DC, 4%) -11.44%, lighten(#FF79DA, 4%) 123.93%);
     box-shadow: 0px 6px 15px 0px rgba(0, 0, 0, 0.35);
   }

@@ -1,0 +1,10 @@
+.restaurant-hero {
+    width: 100%;
+    height: clamp(15.75rem, 10.51rem + 20.96vw, 23.9375rem);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
