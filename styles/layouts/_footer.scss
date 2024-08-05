@@ -26,24 +26,46 @@ footer {
 
     .footer-links-container {
       display: grid;
+      height: 20px;
+      align-self: end;
       gap: 7px;
 
       .link1,
       .link2 {
-        width: 190px;
-        font-weight: 600;
+        min-width: 190px;
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 10px;
+        white-space: nowrap;
 
-        svg {
-          height: 13px;
-          width: 12px;
-          fill: white;
+        .svg-ustensils,
+        .svg-handshake {
+          height: 13px !important;
+          min-width:12px !important;;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+
+        .svg-ustensils {
+          background-image: url(../assets/images/icons/utensils-solid.svg);
+          background-size: cover;
+        }
+
+        .svg-handshake {
+          background-image: url(../assets/images/icons/handshake-angle-solid.svg);
+          background-size: contain;
+        }
+
+        p {
+          font-weight: 600;
         }
       }
 
-      .link3, .link4 {
+      .link3,
+      .link4 {
         width: 130px;
       }
     }
@@ -70,17 +92,8 @@ footer {
 
 @media only screen and (min-width: 900px) {
   .footer-links-container {
-        grid-template-columns: repeat(4, auto);
-        justify-content: end;
-        align-items: end;
-      }
-
+    grid-template-columns: repeat(4, auto);
+    justify-content: end;
+    align-items: end;
+  }
 }
-
-// @media only screen and (min-width: 1240px) {
-//   .footer-links-container {
-//         display: flex;
-//         flex-direction: row;
-//       }
-
-// }
