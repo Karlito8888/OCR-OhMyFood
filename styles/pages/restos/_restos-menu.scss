@@ -38,63 +38,62 @@
           font-weight: 400;
         }
         .heart-switch {
-                // position: relative;
-                display: flex;
-                width: 22px;
-                height: 22px;
-                 margin-right: 28px;
-                 align-self: flex-end;
-              }
+          // position: relative;
+          display: flex;
+          width: 22px;
+          height: 22px;
+          margin-right: 28px;
+          align-self: flex-end;
+        }
 
-              input {
-                display: none;
-              }
+        input {
+          display: none;
+        }
 
-              .heart {
-                width: 22px;
-                height: 22px;
-                position: relative;
-                cursor: pointer;
-                transition: color 0.3s ease;
+        .heart {
+          width: 22px;
+          height: 22px;
+          position: relative;
+          cursor: pointer;
+          transition: color 0.3s ease;
 
-                &::before {
-                  content: "";
-                  position: absolute;
-                  inset: 0;
-                  @include centerChild;
-                  width: 100%;
-                  height: 100%;
-                  background-image: url("../assets/images/icons/heart-regular.svg");
-                  background-size: contain;
-                  background-repeat: no-repeat;
-                  background-position: center;
-                }
+          &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            @include centerChild;
+            width: 100%;
+            height: 100%;
+            background-image: url("../assets/images/icons/heart-regular.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
 
-                &::after {
-                  content: "";
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  width: 100%;
-                  height: 100%;
-                  background-image: linear-gradient(
-                    193.33deg,
-                    #9356dc -11.44%,
-                    #ff79da 123.93%
-                  );
-                  mask-image: url("../assets/images/icons/heart-solid.svg");
-                  mask-size: contain;
-                  mask-repeat: no-repeat;
-                  mask-position: center;
-                  opacity: 0;
-                  transition: opacity 0.3s ease;
-                }
-              }
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+              193.33deg,
+              #9356dc -11.44%,
+              #ff79da 123.93%
+            );
+            mask-image: url("../assets/images/icons/heart-solid.svg");
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+        }
 
-              .heart-switch input:checked + .heart::after {
-                opacity: 1;
-              }
-
+        .heart-switch input:checked + .heart::after {
+          opacity: 1;
+        }
       }
       .order-button {
         margin-bottom: 40px;

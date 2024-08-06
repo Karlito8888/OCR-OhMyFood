@@ -998,7 +998,6 @@ button {
 footer {
   width: 100%;
   height: auto;
-  min-height: 114px;
   background-color: #353535;
   color: white;
   display: -webkit-box;
@@ -1011,6 +1010,7 @@ footer {
 }
 footer .footer-content {
   width: 100%;
+  height: auto;
   padding-inline: 25px;
   padding-block: clamp(1.375rem, 0.975rem + 1.6vw, 1.875rem);
   margin-top: auto;
@@ -1027,7 +1027,6 @@ footer .footer-content .footer-logo {
 }
 footer .footer-content .footer-links-container {
   display: grid;
-  height: 20px;
   align-self: end;
   gap: 7px;
 }
