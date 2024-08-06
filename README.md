@@ -10,8 +10,10 @@ Le projet OhMyFood vise à développer un site web pour présenter les menus de 
 
 - HTML
 - CSS avec Sass (Mobile First)
-- Pas de JavaScript pour les fonctionnalités principales
 - Versionnement avec Git, hébergé sur GitHub
 - Intégration responsive pour mobile, tablette et desktop
 - Animation et effets graphiques réalisés exclusivement avec CSS
+- Pas de JavaScript
 
+
+Ce projet a été réalisé dans le cadre de ma formation chez OpenClassRooms pour améliorer mes compétences en développement front-end.

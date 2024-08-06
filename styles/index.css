@@ -122,25 +122,29 @@ button {
 @-webkit-keyframes fadeOut {
   0% {
     opacity: 1;
+    visibility: visible;
   }
   90% {
     opacity: 0.95;
+    visibility: visible;
   }
   100% {
     opacity: 0;
-    display: none;
+    visibility: hidden;
   }
 }
 @keyframes fadeOut {
   0% {
     opacity: 1;
+    visibility: visible;
   }
   90% {
     opacity: 0.95;
+    visibility: visible;
   }
   100% {
     opacity: 0;
-    display: none;
+    visibility: hidden;
   }
 }
 .loader-container {
@@ -163,6 +167,7 @@ button {
   z-index: 1000;
   -webkit-animation: fadeOut 3s forwards;
           animation: fadeOut 3s forwards;
+  pointer-events: none;
 }
 .loader-container .loader {
   position: relative;
@@ -756,7 +761,9 @@ button {
   font-weight: 400;
 }
 .restaurants-main-container .menu .container .menu-title .heart-switch {
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 22px;
   height: 22px;
   margin-right: 28px;
